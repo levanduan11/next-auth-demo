@@ -4,6 +4,7 @@ import Google from "next-auth/providers/google";
 const allowedDomains = ["gmail.com"];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  trustHost: true,
   providers: [Google],
   callbacks: {
     async signIn({ account, profile }) {
