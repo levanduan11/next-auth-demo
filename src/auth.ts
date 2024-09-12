@@ -28,9 +28,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     redirect() {
       return "/";
     },
+    
   },
   pages: {
     error: "/error/auth",
-    signIn: "/auth/signin",
   },
 });
