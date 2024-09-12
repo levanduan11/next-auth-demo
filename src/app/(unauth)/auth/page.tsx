@@ -4,7 +4,7 @@ import React, { FC } from 'react'
 const AuthPage:FC = () => {
   return (
     <div className='h-screen bg-gray-200 flex items-center justify-center'>
-        <SignIn />
+        {/* <SignIn /> */}
     </div>
   )
 }

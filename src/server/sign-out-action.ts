@@ -8,6 +8,6 @@ export async function signOutAction() {
     redirect("/auth");
   } catch (error) {
     console.log(error);
-    redirect("/auth");
+    redirect("/auth/signin");
   }
 }
