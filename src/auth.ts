@@ -5,12 +5,7 @@ const allowedDomains = ["gmail.com"];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
-  providers: [
-    Google({
-      clientId: process.env.AUTH_GOOGLE_ID,
-      clientSecret: process.env.AUTH_GOOGLE_SECRET,
-    }),
-  ],
+  providers: [Google],
   callbacks: {
     async signIn({ account, profile }) {
       if (account?.provider === "google") {
