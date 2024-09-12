@@ -6,9 +6,11 @@
 
 import SignIn from "@/components/sign-in";
 
+console.log("client id", process.env.AUTH_GOOGLE_ID);
+console.log("client secret", process.env.AUTH_GOOGLE_SECRET);
 
 
-export default function SignInPage() {
+export default  function SignInPage() {
   // const [providers, setProviders] = useState<any>(null);
 
   // useEffect(() => {
@@ -20,14 +22,16 @@ export default function SignInPage() {
   // }, []);
 
   // console.log({ providers });
-  
+
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="px-8 py-6 mt-4 text-left bg-white shadow-lg">
-        <h3 className="text-2xl font-bold text-center">Login to your account</h3>
+        <h3 className="text-2xl font-bold text-center">
+          Login to your account
+        </h3>
         <div className="mt-4">
-         <SignIn />
+          <SignIn />
           {/* {providers &&
             Object.values(providers).map((provider: any) => (
               <div key={provider.name} className="flex items-center justify-center">

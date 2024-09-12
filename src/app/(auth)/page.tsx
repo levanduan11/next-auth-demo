@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 export default function Home() {
   const auth = useSession();
   const email = auth.data?.user?.email;
-  console.log(auth.data?.expires);
   
   return (
     <div className="flex items-center justify-center h-screen bg-slate-100">
